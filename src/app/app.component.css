@@ -1,0 +1,77 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+button {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    background-color: gainsboro;
+    padding: 10px 10px;
+}
+
+.form-register {
+    width: 1000px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 3px 10px 15px #000;
+}
+
+.personal {
+    display: flex;
+}
+
+.personal label {
+    margin-left: 7px;
+    margin-right: 7px;
+    text-align: center;
+}
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 7px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+  }
+
+.nhijo{
+ text-align: center;
+ padding-right: 10px;
+}
+
+.dir{
+    text-align: center;
+    padding-left: 10px;
+    width: 50%;
+}
+
+nav{
+    margin-bottom: 10px;
+}
