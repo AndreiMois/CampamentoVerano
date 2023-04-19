@@ -1,1 +1,93 @@
-<p>add works!</p>
+<form class=".form-register">
+    <div class="principal">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion">
+    </div>
+    <div class="secundario">
+        <label class="curso" for="curso">Curso:</label>
+        <select id="curso" name="curso">
+            <option value="primeroINF">1º INF (3 años)</option>
+            <option value="segundoINF">2º INF (4 años)</option>
+            <option value="terceroINF">3º INF (5 años)</option>
+            <option value="primeroPRIM">1º PRIM </option>
+            <option value="segundoPRIM">2º PRIM </option>
+            <option value="terceroPRIM">3º PRIM </option>
+            <option value="cuartoPRIM">4º PRIM </option>
+            <option value="quintoPRIM">5º PRIM </option>
+            <option value="sextoPRIM">6º PRIM</option>
+        </select>
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+    </div>
+
+    <div class="checkbox-group">
+        <p>Marque:</p>
+        <label>
+            <input type="checkbox" class="opcion" name="opcion1" value="opcion1"> Alumno/a CEIPSO Federico García
+        </label>
+        <label>
+            <input type="checkbox" class="opcion" name="opcion2" value="opcion2"> Empadronado/a
+        </label>
+        <label>
+            <input type="checkbox" class="opcion" name="opcion3" value="opcion3"> Otro
+        </label>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="header-label">Nombre y Apellidos</th>
+                <th class="header-label">DNI</th>
+                <th class="header-label" colspan="2">Contacto (Telefeno / Email)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr-inputs">
+                <th>
+                    <div><input type="string" placeholder="MADRE / PADRE / TUTOR"></div>
+                </th>
+                <th>
+                    <div><input type="string"></div>
+                </th>
+                <th colspan="2">
+                    <div><input type="string"></div>
+                </th>
+            </tr>
+            <tr class="tr-inputs">
+                <th>
+                    <div><input type="string" placeholder="PADRE / MADRE / TUTOR"></div>
+                </th>
+                <th>
+                    <div><input type="string"></div>
+                </th>
+                <th colspan="2">
+                    <div><input type="string"></div>
+                </th>
+            </tr>
+            <tr class="tr-inputs">
+                <th colspan="4">
+                    <div><span>OTRA/S PERSONA/S AUTORIZADA/S A RECOGER AL/A MENOR</span></div>
+                </th>
+            </tr>
+            <tr class="tr-inputs">
+                <th>
+                    <div><input type="string" class="valores" placeholder="NOMBRE"></div>
+                </th>
+                <th>
+                    <div><input type="string" class="valores" placeholder="PARENTESCO"></div>
+                </th>
+                <th>
+                    <div><input type="string" class="valores" placeholder="DNI"></div>
+                </th>
+                <th>
+                    <div><input type="string" class="valores" placeholder="CONTACTO"></div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Enviar">
+</form>

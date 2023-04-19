@@ -23,48 +23,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                  <tr *ngFor="let persona of personas">
+                    <td>{{persona.id}}</td>
+                    <td>{{persona.nombre}}</td>
+                    <td>{{persona.apellido}}</td>
+                    <td>{{persona.direccion}}</td>
+                    <td>{{persona.curso}}</td>
                     <td>
                         <button class="btn btn-warning">Editar</button>
                         <button class="btn btn-danger">Eliminar</button>
                     </td>
-                  </tr>
-                  <tr>
-                    <th>2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th>3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
                   </tr>
                 </tbody>
               </table>

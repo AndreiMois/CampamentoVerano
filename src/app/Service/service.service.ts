@@ -10,7 +10,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/CampamentoVerano/listado'
+  Url='http://localhost:8080/CampamentoSpring/listado'
 
   getListado(){
     return this.http.get<Persona[]>(this.Url)
