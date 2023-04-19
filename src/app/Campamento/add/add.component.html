@@ -26,15 +26,11 @@
 
     <div class="checkbox-group">
         <p>Marque:</p>
-        <label>
-            <input type="checkbox" class="opcion" name="opcion1" value="opcion1"> Alumno/a CEIPSO Federico García
-        </label>
-        <label>
-            <input type="checkbox" class="opcion" name="opcion2" value="opcion2"> Empadronado/a
-        </label>
-        <label>
-            <input type="checkbox" class="opcion" name="opcion3" value="opcion3"> Otro
-        </label>
+        <div *ngFor="let checkbox of checkboxes">
+            <input type="checkbox" class="opcion" name="opcion" value="opcion" [name]="checkbox.name"
+                [(ngModel)]="checkbox.checked" (change)="updateCheckboxes(checkbox)">
+            <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
     </div>
 
     <table class="table">
@@ -89,5 +85,232 @@
             </tr>
         </tbody>
     </table>
+
+    <div>
+        <label id='solo' for="autorizadoSalirSolo">¿Está autorizado el niño(a) para salir solo?</label>
+        <input type="checkbox" id="autorizadoSalirSolo" [(ngModel)]="autorizadoSalirSolo">
+    </div>
+
+    <table class="completo">
+        <thead>
+            <tr>
+                <th id="semana" rowspan="2" class="header-label">Semana</th>
+                <th id="turno1" class="header-label">Turno 1: 9-14h</th>
+                <th id="turno2" class="header-label">Turno 2: 7-14h</th>
+                <th id="turno3" colspan="3" class="header-label">Turno 3: 9-16:30h</th>
+                <th id="turno4" colspan="3" class="header-label">Turno 4: 7-16:30h</th>
+            </tr>
+            <tr>
+                <th id="col1" class="header-label">Campamento basico</th>
+                <th id="col2" class="header-label">Desayuno + C.basico</th>
+                <th id="col3" class="header-label">C.B + L</th>
+                <th id="col3" class="header-label">Comida</th>
+                <th id="col3" class="header-label">Total</th>
+                <th id="col4" class="header-label">Comida</th>
+                <th id="col4" class="header-label">D + C.B + L</th>
+                <th id="col4" class="header-label">Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th id="semana" class="header-label">27 junio - 1 julio</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">4 - 8 julio</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">11 - 15 julio</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">18- 22 julio</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">26 - 29 julio</th>
+                <th id="col1" class="header-label"><label for="text">24€</label> <input type="checkbox" value="24"></th>
+                <th id="col2" class="header-label"> <label for="text">36€</label> <input type="checkbox" value="36">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">36€</label></th>
+                <th id="col3" class="header-label"> <label for="text">20€</label></th>
+                <th id="col3" class="header-label"> <label for="text">56€</label> <input type="checkbox" value="56">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">48€</label></th>
+                <th id="col4" class="header-label"> <label for="text">20€</label></th>
+                <th id="col4" class="header-label"> <label for="text">68€</label> <input type="checkbox" value="68">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">1 - 5 agosto</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">8 - 12 agosto</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">16 - 19 agosto</th>
+                <th id="col1" class="header-label"><label for="text">24€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">36€</label> <input type="checkbox" value="36">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">36€</label></th>
+                <th id="col3" class="header-label"> <label for="text">20€</label></th>
+                <th id="col3" class="header-label"> <label for="text">56€</label> <input type="checkbox" value="56">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">48€</label></th>
+                <th id="col4" class="header-label"> <label for="text">20€</label></th>
+                <th id="col4" class="header-label"> <label for="text">68€</label> <input type="checkbox" value="68">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">22 - 26 agosto</th>
+                <th id="col1" class="header-label"><label for="text">30€</label> <input type="checkbox" value="30"></th>
+                <th id="col2" class="header-label"> <label for="text">45€</label> <input type="checkbox" value="45">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">45€</label></th>
+                <th id="col3" class="header-label"> <label for="text">25€</label></th>
+                <th id="col3" class="header-label"> <label for="text">70€</label> <input type="checkbox" value="70">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">60€</label></th>
+                <th id="col4" class="header-label"> <label for="text">25€</label></th>
+                <th id="col4" class="header-label"> <label for="text">85€</label> <input type="checkbox" value="85">
+                </th>
+            </tr>
+            <tr>
+                <th id="semana" class="header-label">29 - 31 agosto</th>
+                <th id="col1" class="header-label"><label for="text">18€</label> <input type="checkbox" value="18"></th>
+                <th id="col2" class="header-label"> <label for="text">27€</label> <input type="checkbox" value="27">
+                </th>
+                <th id="col3" class="header-label"> <label for="text">27€</label></th>
+                <th id="col3" class="header-label"> <label for="text">15€</label></th>
+                <th id="col3" class="header-label"> <label for="text">42€</label> <input type="checkbox" value="42">
+                </th>
+                <th id="col4" class="header-label"> <label for="text">36€</label></th>
+                <th id="col4" class="header-label"> <label for="text">15€</label></th>
+                <th id="col4" class="header-label"> <label for="text">51€</label> <input type="checkbox" value="51">
+                </th>
+            </tr>
+            <tr id="pieTabla">
+                <th colspan="3" class="header-label">DESCUENTO 50%</th>
+                <th colspan="3" class="header-label"><label for="text">Familia Numerosa</label> <input type="checkbox"
+                        id="familiaNumerosa" value="2"></th>
+                <th colspan="3" class="header-label"> <label for="text">Discapacidad > 33% </label> <input
+                        type="checkbox" id="discapacidad" value="2"></th>
+            </tr>
+            <tr id="pieTabla">
+                <th colspan="5" class="header-label"><button class="boton">IMPORTE TOTAL</button>
+                </th>
+                <th colspan="4" class="header-label">
+                    <p>TOTAL: <span id="resultado"></span>€</p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="tituloBancario">
+        <h4>DATOS BANCARIOS</h4>
+    </div>
+
+    <div class="datosCuenta">
+        <label for="nombre">Titular:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="direccion">NIF/NIE:</label>
+        <input type="text" id="direccion" name="direccion">
+    </div>
+
+    <div class="numeroCuenta">
+        <label for="iban">IBAN:</label>
+        <input type="text" id="iban" name="iban" maxlength="4" value="ES" required>
+
+        <label for="entidad">Entidad:</label>
+        <input type="text" id="entidad" name="entidad" maxlength="4" required>
+
+        <label for="oficina">Oficina:</label>
+        <input type="text" id="oficina" name="oficina" maxlength="4" required>
+
+        <label for="dc">DC:</label>
+        <input type="text" id="dc" name="dc" maxlength="2" required>
+
+        <label for="cuenta">Cuenta:</label>
+        <input type="text" id="cuenta" name="cuenta" maxlength="10" required>
+    </div>
+
+    <label id='piscina' for="piscina">Piscina:</label>
+    <input type="checkbox" id="piscina" [(ngModel)]="piscina">
+
+    <br>
+
+    <label id='nadar' for="nadar">Sabe nadar:</label>
+    <input type="checkbox" id="sabe_nadar" [(ngModel)]="nadar">
+
+    <br>
+
+    <label id='nadar' for="imagenes">Imágenes:</label>
+    <input type="checkbox" id="imagenes" [(ngModel)]="imagenes">
+
     <input type="submit" value="Enviar">
 </form>

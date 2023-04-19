@@ -4,5 +4,4 @@ export class Persona{
     apellido: String;
     curso: String;
     direccion: String;
-
 }

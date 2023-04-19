@@ -1,9 +1,9 @@
 * {
     font-family: 'calibri';
-    font-size: 18px;
 }
 
 form {
+    font-size: 18px;
     width: 900px;
     background: #4b5a68;
     padding: 30px;
@@ -73,6 +73,10 @@ p {
     margin-top: 10px;
 }
 
+.principal {
+    margin-bottom: 7px;
+}
+
 #direccion {
     width: 380px;
 }
@@ -85,6 +89,36 @@ p {
 #nombre {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.numeroCuenta {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.numeroCuenta label {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#iban {
+    width: 60px;
+}
+
+#entidad {
+    width: 70px;
+}
+
+#oficina {
+    width: 70px;
+}
+
+#dc {
+    width: 40px;
+}
+
+#cuenta {
+    width: 120px;
 }
 
 .secundario label {
@@ -112,15 +146,15 @@ p {
 }
 
 .table thead th {
-    border: 1px solid #e4eff8;
+    border: 1px solid #000000;
     background: white;
     height: 30px;
 }
 
 .table thead th.header-label {
-    background: linear-gradient(0deg, #e4eff8, #6d8bca 5%, #e4eff8 150%);
+    background: linear-gradient(0deg, #ffffff, #4b5a68 5%, #ffffff 150%);
     color: white;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .table th,
@@ -131,7 +165,7 @@ p {
 }
 
 .table td {
-    border: 1px solid #e4eff8;
+    border: 1px solid #000000;
 }
 
 .table .tr-inputs th {
@@ -174,6 +208,121 @@ p {
     font-size: 15px;
 }
 
-.tr-inputs div span{
+.tr-inputs div span {
     color: white;
+}
+
+#solo {
+    margin-right: 10px;
+}
+
+.completo {
+    border: solid 2px #000;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.completo input {
+    margin-left: 10px;
+}
+
+.completo th,
+.completo tr {
+    border: solid 2px black;
+    padding: 2px;
+}
+
+#semana {
+    background-color: #ede5ea;
+}
+
+#turno1 {
+    background-color: #b4c6e7;
+}
+
+#turno2 {
+    background-color: #ffe599;
+}
+
+#turno3 {
+    background-color: #ffccff;
+}
+
+#turno4 {
+    background-color: #c5e0b3;
+}
+
+#col1 {
+    background-color: #d9e2f3;
+}
+
+#col2 {
+    background-color: #fff2cc;
+}
+
+#col3 {
+    background-color: #ffddff;
+}
+
+#col4 {
+    background-color: #e2efd9;
+}
+
+#pieTabla th {
+    background-color: #ede5ea;
+    font-weight: bold;
+}
+
+.boton {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.boton:hover {
+    background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+    background-color: #f6f6f6;
+}
+
+.boton:active {
+    position: relative;
+    top: 1px;
+}
+
+.datosCuenta {
+    margin-top: 15px;
+}
+
+#tituloBancario {
+    text-align: center;
+}
+
+.datosExtra {
+    display: flex;
+    align-items: center;
+}
+
+#piscina {
+    margin: 10px;
+}
+
+#nadar {
+    margin: 10px;
+}
+
+#imagenes {
+    margin: 10px;
 }
