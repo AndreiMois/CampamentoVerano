@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/Modelo/Persona';
+import { ServiceService } from 'src/app/Service/service.service';
 
 @Component({
   selector: 'app-add',
@@ -7,15 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
+
   checkboxes: Array<any> | undefined;
+  ngOnInit() {
 
-  ngOnInit(): void {
-    this.checkboxes = [
-      { name: 'checkbox1', label: 'Almuno/a CEIPSO Federico García', checked: true },
-      { name: 'checkbox2', label: 'Empadronado/a', checked: false },
-      { name: 'checkbox3', label: 'Otro', checked: false }
-    ];
+  this.checkboxes = [
+    { name: 'checkbox1', value: "Almuno/a CEIPSO Federico García", label: 'Almuno/a CEIPSO Federico García', checked: true },
+    { name: 'checkbox2', value: "Empadronado/a", label: 'Empadronado/a', checked: false },
+    { name: 'checkbox3', value: "Otro", label: 'Otro', checked: false }
+  ];
+  }
 
+
+  persona: Persona = new Persona();
+  constructor(private router: Router, private service: ServiceService) {
+  }
+
+  Guardar(persona: Persona) {
+    this.service.createPersona(persona)
+      .subscribe(data => {
+        console.log(persona);
+        alert("Se agrego con exito");
+        this.router.navigate(["listar"]);
+      })
   }
 
   updateCheckboxes(checkedCheckbox: any) {
@@ -25,11 +42,6 @@ export class AddComponent implements OnInit {
       }
     });
   }
-
-  autorizadoSalirSolo = false;
-  nadar = false;
-  piscina = false;
-  imagenes = false;
-
 }
+
 

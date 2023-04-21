@@ -4,3 +4,8 @@ h4{
 button{
     margin: 2px;
 }
+
+td, tr{
+    text-align: center;
+}
+

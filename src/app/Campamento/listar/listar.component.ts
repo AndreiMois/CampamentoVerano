@@ -10,16 +10,16 @@ import { ServiceService } from 'src/app/Service/service.service';
 })
 export class ListarComponent implements OnInit {
 
-  personas:Persona[];
-  constructor(private service:ServiceService, private router:Router) {}
+  personas: Persona[];
+  constructor(private service: ServiceService, private router: Router) {
+ }
 
   ngOnInit() {
     this.service.getListado()
-    .subscribe(data => {
-      this.personas = data;
-    })
+      .subscribe(data => {
+        this.personas = data;
+      })
   }
-
 }
 
 
