@@ -19,4 +19,12 @@ export class ServiceService {
   createPersona(persona:Persona){
     return this.http.post<Persona>(this.Url,persona);
   }
+
+  getPersonaId(id:number){
+    return this.http.get<Persona>(this.Url+"/"+id);
+  }
+
+  deletePersona(persona:Persona){
+    return this.http.delete<Persona>(this.Url+"/"+persona.id);
+  }
 }

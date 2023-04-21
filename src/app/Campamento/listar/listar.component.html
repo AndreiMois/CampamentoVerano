@@ -36,8 +36,8 @@
             <td><span *ngIf="persona.saleSolo; else noSaleSolo">SI</span> <ng-template #noSaleSolo>NO</ng-template></td>
             <td>{{persona.importe}}</td>
             <td>
-              <button class="btn btn-warning">Editar</button>
-              <button class="btn btn-danger">Eliminar</button>
+              <button (click)="Editar(persona)" class="btn btn-warning">Editar</button>
+              <button (click)="Delete(persona)" class="btn btn-danger">Eliminar</button>
             </td>
           </tr>
         </tbody>
