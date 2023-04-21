@@ -326,3 +326,12 @@ p {
 #imagenes {
     margin: 7px;
 }
+
+.booton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.booton button{
+    font-size:1.2em;
+}

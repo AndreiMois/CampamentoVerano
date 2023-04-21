@@ -21,7 +21,6 @@ export class AddComponent implements OnInit {
   ];
   }
 
-
   persona: Persona = new Persona();
   constructor(private router: Router, private service: ServiceService) {
   }
