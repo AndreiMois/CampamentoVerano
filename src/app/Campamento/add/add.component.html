@@ -25,12 +25,21 @@
 
         <div class="checkbox-group">
             <p>Marque:</p>
-            <div *ngFor="let checkbox of checkboxes">
-                <input type="checkbox" class="opcion" name="opcion" value="opcion" [name]="checkbox.name"
-                    [(ngModel)]="checkbox.checked" (change)="updateCheckboxes(checkbox)">
-                <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+            <div>
+                <label>
+                    <input type="checkbox" name="option" value="Alumno/a CEIPSO Federico García"
+                        (change)="onOptionSelected($event)"> Alumno/a CEIPSO Federico García
+                </label>
+                <label>
+                    <input type="checkbox" name="option" value="Empadronado/a"
+                        (change)="onOptionSelected($event)">Empadronado/a
+                </label>
+                <label>
+                    <input type="checkbox" name="option" value="Otro" (change)="onOptionSelected($event)"> Otro
+                </label>
             </div>
         </div>
+
 
         <table class="table">
             <thead>

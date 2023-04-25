@@ -1,0 +1,337 @@
+* {
+    font-family: 'calibri';
+}
+
+form {
+    font-size: 18px;
+    width: 900px;
+    background: #4b5a68;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    flex-basis: 15%;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select,
+input[type="date"] {
+    flex-basis: 85%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    transform: scale(1.7);
+    /* Escala el tamaño del checkbox */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.curso {
+    margin-right: 10px;
+}
+
+p {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.principal {
+    margin-bottom: 7px;
+}
+
+#direccion {
+    width: 380px;
+}
+
+#nombre {
+    width: 280px;
+}
+
+#direccion,
+#nombre {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.numeroCuenta {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.numeroCuenta label {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#iban {
+    width: 60px;
+}
+
+#entidad {
+    width: 70px;
+}
+
+#oficina {
+    width: 70px;
+}
+
+#dc {
+    width: 40px;
+}
+
+#cuenta {
+    width: 120px;
+}
+
+.secundario label {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.secundario {
+    padding-left: 10%;
+}
+
+.checkbox-group input {
+    margin-left: 10px;
+}
+
+.table {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+}
+
+.table thead th {
+    border: 1px solid #000000;
+    background: white;
+    height: 30px;
+}
+
+.table thead th.header-label {
+    background: linear-gradient(0deg, #ffffff, #4b5a68 5%, #ffffff 150%);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.table th,
+.table td {
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+
+}
+
+.table td {
+    border: 1px solid #000000;
+}
+
+.table .tr-inputs th {
+    position: relative;
+    padding: 0;
+    padding-bottom: 1.2rem;
+    margin: 0;
+}
+
+.table .tr-inputs div {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.table input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    font-size: 16px;
+}
+
+.table th {
+    width: 50px;
+    height: 35px;
+}
+
+.table span {
+    font-size: 14px;
+}
+
+.table span.solo {
+    font-size: 25px;
+}
+
+.table span.opcion {
+    font-size: 15px;
+}
+
+.tr-inputs div span {
+    color: white;
+}
+
+#solo {
+    margin-right: 10px;
+}
+
+.completo {
+    border: solid 2px #000;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.completo input {
+    margin-left: 10px;
+}
+
+.completo th,
+.completo tr {
+    border: solid 2px black;
+    padding: 2px;
+}
+
+#semana {
+    background-color: #ede5ea;
+}
+
+#turno1 {
+    background-color: #b4c6e7;
+}
+
+#turno2 {
+    background-color: #ffe599;
+}
+
+#turno3 {
+    background-color: #ffccff;
+}
+
+#turno4 {
+    background-color: #c5e0b3;
+}
+
+#col1 {
+    background-color: #d9e2f3;
+}
+
+#col2 {
+    background-color: #fff2cc;
+}
+
+#col3 {
+    background-color: #ffddff;
+}
+
+#col4 {
+    background-color: #e2efd9;
+}
+
+#pieTabla th {
+    background-color: #ede5ea;
+    font-weight: bold;
+}
+
+.boton {
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.boton:hover {
+    background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+    background-color: #f6f6f6;
+}
+
+.boton:active {
+    position: relative;
+    top: 1px;
+}
+
+.datosCuenta {
+    margin-top: 15px;
+}
+
+#tituloBancario {
+    text-align: center;
+}
+
+.datosExtra {
+    display: flex;
+    align-items: center;
+}
+
+#piscina {
+    margin: 7px;
+}
+
+#nadar {
+    margin: 7px;
+}
+
+#imagenes {
+    margin: 7px;
+}
+
+.booton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.booton button{
+    font-size:1.2em;
+}

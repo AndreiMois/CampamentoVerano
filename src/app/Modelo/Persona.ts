@@ -1,8 +1,9 @@
 export class Persona {
     id: number;
+    activo: string;
 
     /*Ninio*/
-    nombre:string;
+    nombre: string;
     direccion: string;
     curso: string;
     fechaNac: Date;

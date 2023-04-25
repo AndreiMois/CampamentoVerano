@@ -20,4 +20,6 @@ export class AppComponent {
   Editar(){
     this.router.navigate(["edit"]);
   }
+
+  
 }

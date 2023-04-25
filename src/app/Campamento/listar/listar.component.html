@@ -2,11 +2,13 @@
   <div class="card">
     <div class="card-header">
       <h4>Listado de los apuntados</h4>
+      <button class="btn btn-success" id="actualizar" (click)="ActualizarActivo(persona)">Actualizar Activos</button>
     </div>
     <div class="card-body">
       <table class="table">
         <thead style="background-color: gainsboro;">
           <tr>
+            <th scope="col"></th>
             <th scope="col">Nombre niño/a</th>
             <th scope="col">Dirección</th>
             <th scope="col">Curso</th>
@@ -18,11 +20,11 @@
             <th scope="col">Solo</th>
             <th scope="col">Importe</th>
             <th scope="col">Acciones</th>
-
           </tr>
         </thead>
         <tbody class="bodyTable">
           <tr *ngFor="let persona of personas">
+            <td><input type="checkbox" name="activo" [(ngModel)]="persona.activo"> </td>
             <td>{{persona.nombre}}</td>
             <td>{{persona.direccion}}</td>
             <td>{{persona.curso}}</td>
