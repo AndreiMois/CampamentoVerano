@@ -1,35 +1,38 @@
+import { Tabla } from "./Tabla";
+
 export class Persona {
-    id: number;
-    activo: string;
+    id?: number;
+    activo?: boolean;
+    tabla: Tabla;
 
     /*Ninio*/
-    nombre: string;
-    direccion: string;
-    curso: string;
-    fechaNac: Date;
-    empadronamiento: string;
+    nombre?: string;
+    direccion?: string;
+    curso?: string;
+    fechaNac?: string;
+    empadronamiento?: string;
 
     /*Madre*/
-    nombreMadre: string;
-    dniMadre: string;
-    contactoMadre: string;
+    nombreMadre?: string;
+    dniMadre?: string;
+    contactoMadre?: string;
 
     /*Padre*/
-    nombrePadre: string;
-    dniPadre: string;
-    contactoPadre: string;
+    nombrePadre?: string;
+    dniPadre?: string;
+    contactoPadre?: string;
 
     /*Autorizado*/
-    nombreAutorizado: string;
-    parentesco: string;
-    dniAutorizado: string;
-    contactoAutorizado: string;
+    nombreAutorizado?: string;
+    parentesco?: string;
+    dniAutorizado?: string;
+    contactoAutorizado?: string;
 
     /*Sale Solo*/
-    saleSolo: boolean;
+    saleSolo?: boolean;
 
     /*Familia Numerosa*/
-    familiaNumerosa: boolean;
+    familiaNumerosa?: boolean;
 
     /*Discapacidad*/
     discapaciada: boolean;

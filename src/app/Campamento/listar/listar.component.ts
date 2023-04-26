@@ -33,15 +33,18 @@ export class ListarComponent implements OnInit {
         alert("Usuario eliminado")
       })
   }
-  
+
   persona: Persona = new Persona();
-  ActualizarActivo(persona: Persona) {
+  actualizarActivo(event: any, persona: Persona) {
+    if(event.target.checked) {
+      persona.activo = true;
+    }else{
+      persona.activo = false;
+    }
     this.service.updatePersona(persona)
-    .subscribe(data => {
-      this.persona = data;
-      alert("Activos actualizados");
-      this.router.navigate(["listar"])
-    })
+      .subscribe(data => {
+        this.persona = data;
+      })
   }
 }
 

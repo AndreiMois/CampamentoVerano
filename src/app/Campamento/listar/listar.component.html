@@ -2,7 +2,6 @@
   <div class="card">
     <div class="card-header">
       <h4>Listado de los apuntados</h4>
-      <button class="btn btn-success" id="actualizar" (click)="ActualizarActivo(persona)">Actualizar Activos</button>
     </div>
     <div class="card-body">
       <table class="table">
@@ -24,11 +23,11 @@
         </thead>
         <tbody class="bodyTable">
           <tr *ngFor="let persona of personas">
-            <td><input type="checkbox" name="activo" [(ngModel)]="persona.activo"> </td>
+            <td><input type="checkbox" name="activo" [checked]="persona.activo" (change)="actualizarActivo($event, persona)"> </td>
             <td>{{persona.nombre}}</td>
             <td>{{persona.direccion}}</td>
             <td>{{persona.curso}}</td>
-            <td>{{persona.fechaNac}}</td>
+            <td>{{persona.fechaNac | date:'dd/MM/yyyy'}}</td>
             <td>{{persona.empadronamiento}}</td>
             <td>{{persona.nombreMadre}}<br>{{persona.dniMadre}}<br>{{persona.contactoMadre}}</td>
             <td>{{persona.nombrePadre}}<br>{{persona.dniPadre}}<br>{{persona.contactoPadre}}</td>

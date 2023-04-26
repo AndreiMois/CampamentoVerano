@@ -33,6 +33,7 @@ export class ServiceService {
   deletePersona(persona:Persona){
     return this.http.delete<Persona>(this.Url+"/"+persona.id);
   }
+  
   obtenerEmpadronamiento(): Observable<string> {
     const url = `${this.Url}/empadronamiento`;
     return this.http.get<string>(url);
